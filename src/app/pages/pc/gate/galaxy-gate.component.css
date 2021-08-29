@@ -19,6 +19,10 @@
   background-size: contain;
 }
 
+.address_block {
+  display: none;
+}
+
 .address {
   position: absolute;
   bottom: 10px;
@@ -62,6 +66,10 @@
     background: url("../../../../assets/images/gate/mobile_title.png") no-repeat
       center;
     background-size: contain;
+  }
+
+  .address_block {
+    display: none;
   }
 
   .address {
