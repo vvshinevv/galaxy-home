@@ -107,6 +107,7 @@
   }
 
   .address_block {
+    display: block;
     width: 100%;
     position: absolute;
     bottom: 0px;
