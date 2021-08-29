@@ -130,8 +130,8 @@ export class GalaxyGateComponent implements OnInit {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     container.appendChild(this.renderer.domElement);
 
-    this.stats = new Stats();
-    container.appendChild(this.stats.dom);
+    // this.stats = new Stats();
+    // container.appendChild(this.stats.dom);
 
     container.style.touchAction = "none";
     container.addEventListener("pointermove", (event: any) => {
@@ -158,7 +158,7 @@ export class GalaxyGateComponent implements OnInit {
     requestAnimationFrame(() => this.animate());
 
     this.render();
-    this.stats.update();
+    // this.stats.update();
   }
 
   public render() {
