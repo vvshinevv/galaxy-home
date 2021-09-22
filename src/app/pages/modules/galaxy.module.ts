@@ -4,6 +4,11 @@ import { GalaxyGateComponent } from "../pc/gate/galaxy-gate.component";
 import { RouterModule, Routes } from "@angular/router";
 import { GalaxyLayoutComponent } from "../pc/layout/galaxy-layout.component";
 import { GalaxyHomeComponent } from "../pc/home/galaxy-home.component";
+import { GalaxyCompanyComponent } from '../pc/home/intro/galaxy-company.component';
+import { GalaxyAboutComponent } from '../pc/home/about/galaxy-about.component';
+import { GalaxyBusinessComponent } from '../pc/home/business/galaxy-business.component';
+import { GalaxyCareersComponent } from '../pc/home/careers/galaxy-careers.component';
+import { GalaxyIpComponent } from '../pc/home/ip/galaxy-ip.component';
 
 const routes: Routes = [
   {
@@ -27,6 +32,11 @@ const routes: Routes = [
     GalaxyGateComponent,
     GalaxyLayoutComponent,
     GalaxyHomeComponent,
+    GalaxyCompanyComponent,
+    GalaxyAboutComponent,
+    GalaxyBusinessComponent,
+    GalaxyCareersComponent,
+    GalaxyIpComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
