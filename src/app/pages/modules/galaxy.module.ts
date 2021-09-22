@@ -11,8 +11,12 @@ const routes: Routes = [
     component: GalaxyLayoutComponent,
     children: [
       {
-        path: "**",
+        path: "gate",
         component: GalaxyGateComponent,
+      },
+      {
+        path: "**",
+        component: GalaxyHomeComponent,
       },
     ],
   },
@@ -22,7 +26,7 @@ const routes: Routes = [
   declarations: [
     GalaxyGateComponent,
     GalaxyLayoutComponent,
-    GalaxyHomeComponent
+    GalaxyHomeComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
