@@ -1882,3 +1882,7 @@ body.boxed
     color: #111;
   }
 }
+
+.bg-style1 {
+  background-color: black;
+}
