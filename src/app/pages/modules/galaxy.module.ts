@@ -11,6 +11,7 @@ import { GalaxyCareersComponent } from '../pc/home/careers/galaxy-careers.compon
 import { GalaxyIpComponent } from '../pc/home/ip/galaxy-ip.component';
 import { XyzComponent } from '../pc/home/metaverse/xyz/xyz.component';
 import { MommysonComponent } from '../pc/home/metaverse/mommyson/mommyson.component';
+import { GalaxySocialComponent } from '../pc/home/social/galaxy-social.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,7 @@ const routes: Routes = [
     GalaxyIpComponent,
     XyzComponent,
     MommysonComponent,
+    GalaxySocialComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
