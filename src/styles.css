@@ -567,7 +567,9 @@ a.rotate-box-2:hover {
 .rotate-box-1 .rotate-box-info {
   padding-left: 60px;
 }
-
+.rotate-box-1-wrapper .subTitle {
+  font-size: 23px;
+}
 /* End rotate box-1 */
 
 /* Begin rotate box-2 */
@@ -1700,6 +1702,9 @@ p.subtitle {
     float: none;
     margin-right: 0;
     margin-bottom: 30px;
+  }
+  .rotate-fact {
+    margin-top: 100px;
   }
   a.rotate-box-1 {
     text-align: center;

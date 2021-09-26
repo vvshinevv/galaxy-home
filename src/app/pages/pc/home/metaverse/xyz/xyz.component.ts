@@ -71,7 +71,6 @@ export class XyzComponent implements OnInit {
   }
 
   public onWindowResize() {
-    this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
   }
 
