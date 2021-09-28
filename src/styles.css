@@ -172,7 +172,7 @@ body {
   position: relative;
   height: 100%;
   font-size: 14px;
-  color:whitesmoke;
+  color: whitesmoke;
 }
 body .body {
   height: 100%;
@@ -248,7 +248,8 @@ section {
   width: 100%;
   height: 100%;
   z-index: 99999;
-  background: #fff url(assets/images/home/page-loader.gif) center center no-repeat;
+  background: #fff url(assets/images/home/page-loader.gif) center center
+    no-repeat;
 }
 .devider {
   width: 100%;
@@ -1203,6 +1204,10 @@ ul.contact-address li:last-child {
 ul.contact-address li i {
   margin-right: 10px;
 }
+
+.contact-info .subTitle {
+  font-size: 23px;
+}
 /* ===== End contact ===== */
 
 /* ===== Begin footer ===== */
@@ -1957,7 +1962,7 @@ body.boxed
 
 /* === Contact === */
 #contact-section {
-  background-color: #363940;
+  background-color: black;
 }
 #contact-section .contact .contact-form button {
   background-color: #363940;
@@ -2045,4 +2050,9 @@ body.boxed
 
 .bg-style1 {
   background-color: black;
+}
+
+canvas {
+  width: 100%;
+  height: 450px;
 }

@@ -48,6 +48,7 @@ export class XyzComponent implements OnInit {
     loader.load(
       "../../../../../assets/models/xyz/helix_201.xyz",
       (geometry) => {
+        console.log(geometry)
         geometry.center();
 
         const vertexColors = geometry.hasAttribute("color") === true;
@@ -65,7 +66,6 @@ export class XyzComponent implements OnInit {
 
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setPixelRatio(window.devicePixelRatio);
-
     container.appendChild(this.renderer.domElement);
     window.addEventListener("resize", () => this.onWindowResize());
   }
