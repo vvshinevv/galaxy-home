@@ -70,8 +70,8 @@ export class ConnectionComponent implements OnInit, AfterViewChecked {
 
     loader.load("1.glb", (gltf: any) => {
       this.mesh = gltf.scenes[0];
-      this.mesh.scale.set(65, 65, 65);
-      gltf.scene.position.x = 370;
+      this.mesh.scale.set(50, 50, 50);
+      gltf.scene.position.x = 295;
       this.scene.add(gltf.scene);
       this.render(this.renderer);
       this.animate(this.mesh);
@@ -85,7 +85,7 @@ export class ConnectionComponent implements OnInit, AfterViewChecked {
   public animate(mesh: any) {
     requestAnimationFrame(() => this.animate(mesh));
     this.controls.update();
-    mesh.rotation.x += 0.005;
+    mesh.rotation.x += 0.05;
     this.renderer.render(this.scene, this.camera);
   }
 

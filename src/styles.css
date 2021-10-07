@@ -1155,6 +1155,11 @@ ul.social-list li a i {
   color: #fff;
   font-size: 20px;
 }
+#social-section span {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
 /* ===== End social ===== */
 
 /* ===== Begin contact ===== */
@@ -1977,7 +1982,7 @@ body.boxed
 #cta-section,
 #partners-section,
 #social-section {
-  background: black url("assets/images/home/pat-bg.png") repeat;
+  background: white url("assets/images/home/pat-bg.png") repeat;
 }
 
 /* === Portfolio === */
@@ -2103,6 +2108,10 @@ body.boxed
 
 .bg-style1 {
   background-color: black;
+}
+
+.bg-style2 {
+  background-color: white;
 }
 
 canvas {
