@@ -30,8 +30,8 @@ export class CultureComponent implements OnInit {
   constructor(private renderer2: Renderer2) {}
 
   ngOnInit() {
-    this.height = this.motion4Element.nativeElement.offsetHeight;
-    this.width = this.motion4Element.nativeElement.offsetWidth;
+    this.height = this.motion4Element.nativeElement.offsetHeight - 15;
+    this.width = this.motion4Element.nativeElement.offsetWidth - 15;
     this.init();
   }
 
