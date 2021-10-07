@@ -30,8 +30,8 @@ export class ConnectionComponent implements OnInit, AfterViewChecked {
   constructor(private renderer2: Renderer2) {}
 
   ngOnInit(): void {
-    this.height = this.contactFormElement.nativeElement.offsetHeight;
-    this.width = this.contactFormElement.nativeElement.offsetWidth;
+    this.height = this.contactFormElement.nativeElement.offsetHeight - 15;
+    this.width = this.contactFormElement.nativeElement.offsetWidth - 15;
     this.init();
   }
 

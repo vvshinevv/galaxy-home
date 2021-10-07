@@ -27,15 +27,17 @@ export class MetaverseComponent implements OnInit, AfterViewChecked {
   controls: any;
   height: number;
   width: number;
-  constructor(private renderer2: Renderer2) {}
+  constructor(private renderer2: Renderer2) {
+  }
 
   ngOnInit() {
-    this.height = this.motion1Element.nativeElement.offsetHeight;
-    this.width = this.motion1Element.nativeElement.offsetWidth;
+    this.height = this.motion1Element.nativeElement.offsetHeight - 15;
+    this.width = this.motion1Element.nativeElement.offsetWidth - 15;
     this.init();
   }
 
-  ngAfterViewChecked(): void {}
+  ngAfterViewChecked(): void {
+  }
 
   public init() {
     const container = this.galaxy3dConainterElement.nativeElement;
@@ -69,7 +71,7 @@ export class MetaverseComponent implements OnInit, AfterViewChecked {
     );
 
     loader.load("2.glb", (gltf: any) => {
-      gltf.scene.traverse((child) => {
+      gltf.scene.traverse((child: any) => {
         if (child.isMesh) {
           child.geometry.center(); // center here
         }

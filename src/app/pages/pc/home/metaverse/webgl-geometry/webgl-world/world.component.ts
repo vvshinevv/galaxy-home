@@ -30,8 +30,8 @@ export class WorldComponent implements OnInit {
   constructor(private renderer2: Renderer2) {}
 
   ngOnInit() {
-    this.height = this.motion2Element.nativeElement.offsetHeight;
-    this.width = this.motion2Element.nativeElement.offsetWidth;
+    this.height = this.motion2Element.nativeElement.offsetHeight - 15;
+    this.width = this.motion2Element.nativeElement.offsetWidth - 15;
     this.init();
   }
 
