@@ -236,6 +236,13 @@ p {
 .navbar-nav > li > a {
   font-family: "Noto Sans KR", sans-serif;
 }
+.pc {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
 /* End Fonts */
 
 section {
@@ -980,6 +987,9 @@ a.rotate-box-2:hover {
 .counter-up .fact-inner .subTitle {
   font-size: 23px;
 }
+.fact-header {
+  margin-bottom: 20px;
+}
 /* ===== End Counter-Up ===== */
 
 /* ===== Begin team ===== */
@@ -1547,7 +1557,7 @@ p.subtitle {
   }
   .team-hover p {
     font-size: 14px;
-  }
+  }  
 }
 
 /* Medium Devices, Desktops */
@@ -1650,6 +1660,14 @@ p.subtitle {
   }
   h5 {
     font-size: 32px;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
   }
 
   /* Navbar brand */
