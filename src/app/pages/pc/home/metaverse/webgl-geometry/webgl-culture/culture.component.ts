@@ -30,8 +30,11 @@ export class CultureComponent implements OnInit {
   constructor(private renderer2: Renderer2) {}
 
   ngOnInit() {
-    this.height = this.motion4Element.nativeElement.offsetHeight - 15;
-    this.width = this.motion4Element.nativeElement.offsetWidth - 15;
+    this.height = this.motion4Element.nativeElement.offsetHeight - 30;
+    this.width = this.motion4Element.nativeElement.offsetWidth - 30;
+
+    console.log(this.height);
+    console.log(this.width);
     this.init();
   }
 
@@ -41,7 +44,7 @@ export class CultureComponent implements OnInit {
     const container = this.galaxy3dConainterElement.nativeElement;
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(this.width, this.width);
+    // this.renderer.setSize(this.width, this.width);
     this.renderer.outputEncoding = THREE.sRGBEncoding;
 
     container.appendChild(this.renderer.domElement);
@@ -100,7 +103,6 @@ export class CultureComponent implements OnInit {
   }
 
   public render(renderer: any) {
-    console.log(this.camera.position);
     renderer.render(this.scene, this.camera);
   }
 
