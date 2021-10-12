@@ -19,6 +19,7 @@ import * as THREE from "three";
 })
 export class ConnectionComponent implements OnInit, AfterViewChecked {
   @ViewChild("galaxy3dConainterElement") galaxy3dConainterElement: ElementRef;
+  @ViewChild("cover") coverElement: ElementRef;
   @Input("contactFormElement") contactFormElement: ElementRef;
   camera: any;
   scene: any;
@@ -33,6 +34,14 @@ export class ConnectionComponent implements OnInit, AfterViewChecked {
     this.height = this.contactFormElement.nativeElement.offsetHeight - 15;
     this.width = this.contactFormElement.nativeElement.offsetWidth - 15;
     this.init();
+    this.cover();
+  }
+
+  public cover() {
+    this.renderer2.setStyle(this.coverElement.nativeElement, "width", this.galaxy3dConainterElement.nativeElement.offsetWidth + "px");
+    this.renderer2.setStyle(this.coverElement.nativeElement, "height", this.galaxy3dConainterElement.nativeElement.offsetHeight + "px");
+    this.renderer2.setStyle(this.coverElement.nativeElement, "z-index", 9999);
+    // this.renderer2.setStyle(this.galaxy3dConainterElement.nativeElement, "position", "absolute");
   }
 
   ngAfterViewChecked(): void {}
