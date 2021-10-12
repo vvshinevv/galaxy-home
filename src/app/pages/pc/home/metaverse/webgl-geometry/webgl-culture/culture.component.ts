@@ -19,7 +19,9 @@ import * as THREE from "three";
 })
 export class CultureComponent implements OnInit {
   @ViewChild("galaxy3dConainterElement") galaxy3dConainterElement: ElementRef;
+  @ViewChild("cover") coverElement: ElementRef;
   @Input("motion4Element") motion4Element: ElementRef;
+  
   camera: any;
   scene: any;
   renderer: any;
@@ -32,10 +34,15 @@ export class CultureComponent implements OnInit {
   ngOnInit() {
     this.height = this.motion4Element.nativeElement.offsetHeight - 30;
     this.width = this.motion4Element.nativeElement.offsetWidth - 30;
-
-    console.log(this.height);
-    console.log(this.width);
     this.init();
+    this.cover();
+  }
+
+  public cover() {
+    this.renderer2.setStyle(this.coverElement.nativeElement, "width", this.galaxy3dConainterElement.nativeElement.offsetWidth + "px");
+    this.renderer2.setStyle(this.coverElement.nativeElement, "height", this.galaxy3dConainterElement.nativeElement.offsetHeight + "px");
+    this.renderer2.setStyle(this.coverElement.nativeElement, "z-index", 9999);
+    // this.renderer2.setStyle(this.galaxy3dConainterElement.nativeElement, "position", "absolute");
   }
 
   ngAfterViewChecked(): void {}
