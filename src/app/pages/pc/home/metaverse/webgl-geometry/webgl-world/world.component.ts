@@ -83,6 +83,7 @@ export class WorldComponent implements OnInit {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableZoom = false;
     this.controls.autoRotate = true;
+    this.controls.enableRotate = false;
     // this.controls.addEventListener("change", () => {
     //   this.render(this.renderer);
     // });

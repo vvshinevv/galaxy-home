@@ -50,7 +50,7 @@ export class MetaverseComponent implements OnInit, AfterViewChecked {
     this.camera = new THREE.PerspectiveCamera(
       45,
       this.width / this.width,
-      1,
+      2,
       2000
     );
 
@@ -71,21 +71,23 @@ export class MetaverseComponent implements OnInit, AfterViewChecked {
     );
 
     loader.load("2.glb", (gltf: any) => {
+      // gltf.scene.scale.set(15, 15, 15); // scale here
       gltf.scene.traverse((child: any) => {
         if (child.isMesh) {
           child.geometry.center(); // center here
         }
       });
-
-      gltf.scene.scale.set(10, 10, 10); // scale here
-      this.scene.add(gltf.scene);
+      
       this.mesh = gltf.scenes[0];
+      this.mesh.scale.set(10, 10, 10);
+      this.scene.add(gltf.scene);
       this.render(this.renderer);
       this.animate(this.mesh);
     });
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableZoom = false;
+    this.controls.enableRotate = false;
     // this.controls.autoRotate = true;
     // this.controls.addEventListener("change", () => {
     //   this.render(this.renderer);

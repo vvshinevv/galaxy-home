@@ -72,13 +72,14 @@ export class CultureComponent implements OnInit {
     );
 
     loader.load("5.glb", (gltf: any) => {
+      gltf.scene.scale.set(10, 10, 10);
       gltf.scene.traverse((child) => {
         if (child.isMesh) {
           child.geometry.center(); // center here
         }
       });
 
-      gltf.scene.scale.set(10, 10, 10); // scale here
+       // scale here
       this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
       this.render(this.renderer);
@@ -89,9 +90,7 @@ export class CultureComponent implements OnInit {
     this.controls.enableZoom = false;
     this.controls.autoRotateSpeed = 20;
     this.controls.autoRotate = true;
-    // this.controls.addEventListener("change", () => {
-    //   this.render(this.renderer);
-    // });
+    this.controls.enableRotate = false;
   }
 
   public animate(mesh: any) {

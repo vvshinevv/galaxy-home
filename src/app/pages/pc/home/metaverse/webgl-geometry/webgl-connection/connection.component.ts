@@ -80,6 +80,7 @@ export class ConnectionComponent implements OnInit, AfterViewChecked {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.autoRotate = true;
     this.controls.enableZoom = false;
+    this.controls.enableRotate = false;
   }
 
   public animate(mesh: any) {
