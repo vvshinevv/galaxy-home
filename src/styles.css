@@ -325,7 +325,7 @@ section {
 .navbar-brand {
   background-repeat: no-repeat;
   background-position: left center;
-  width: 270px;
+  width: 260px;
   height: auto;
   padding: 24px 0;
   text-indent: -99999px;
@@ -340,16 +340,17 @@ section {
   transition: all 0.2s ease-in-out;
 }
 .navbar-default .navbar-brand {
-  background-image: url(assets/images/home/logo_u.png);
+  background-image: url(assets/images/home/logo_u2.png);
+  background-size: 80%;
 }
 .navbar-shrink .navbar-brand {
-  background-image: url(assets/images/home/logo_u.png);
+  background-image: url(assets/images/home/logo_u2.png);
 }
 .navbar-transparent .navbar-brand {
-  background-image: url(assets/images/home/logo_u.png);
+  background-image: url(assets/images/home/logo_u2.png);
 }
 .navbar-inverse .navbar-brand {
-  background-image: url(assets/images/home/logo_u.png);
+  background-image: url(assets/images/home/logo_u2.png);
 }
 .navbar-nav img {
   width: 80%;
@@ -461,7 +462,7 @@ section {
 #text-carousel-intro-section .caption {
   position: relative;
   top: 50%;
-  margin-top: -70px;
+  margin-top: -210px;
 }
 #text-carousel-intro-section .caption h1 {
   margin-top: 0;
@@ -482,7 +483,7 @@ section {
 .rotate-box-1,
 .rotate-box-2 {
   display: inline-block;
-  margin: 30px 0;
+  margin: 20px 0;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -580,7 +581,8 @@ a.rotate-box-2:hover {
 }
 .rotate-box-1-wrapper .subTitle {
   font-size: 23px;
-  display: block;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .rotate-box-1-wrapper .mobile .subTitle {
@@ -973,10 +975,10 @@ a.rotate-box-2:hover {
 .counter-up {
   position: relative;
   background-color: #171717;
-  padding: 80px 0 50px 0;
+  padding: 0px 0 50px 0;
 }
 .counter-up .cover {
-  background-color: rgba(0, 7, 11, 0.8);
+  background-color: black;
 }
 .counter-up .fact {
 }
@@ -994,6 +996,9 @@ a.rotate-box-2:hover {
 }
 .fact-inner .mobile {
   text-align: center;
+}
+.fact-inner-start {
+  margin-top: 30px;
 }
 .fact-header {
   margin-bottom: 20px;
@@ -1194,7 +1199,7 @@ ul.social-list li a i {
   font-weight: 400;
 }
 #contact-section .cover {
-  background-color: rgba(5, 8, 11, 0.93);
+  background-color: black;
 }
 #contact-section .contact .contact-form {
   margin-bottom: 40px;
@@ -1436,7 +1441,7 @@ p.subtitle {
 /* Button blank */
 .btn-blank {
   /* border: 2px solid #fff; */
-  background: #fff;
+  /* background: #fff; */
   color: #fff;
   /* padding: 8px 12px; */
   display: inline-block;
@@ -1461,7 +1466,7 @@ p.subtitle {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #fff;
+  /* background: #fff; */
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 100%;
@@ -1674,6 +1679,22 @@ body.boxed
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) {
+  .navbar-brand {
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: auto;
+    padding: 24px 0;
+    text-indent: -99999px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1855,10 +1876,10 @@ body.boxed
   /* Navbar brand */
   .navbar-brand,
   .navbar-brand:focus {
-    margin-left: 10px;
+    margin-left: 20px;
   }
   .navbar-default .navbar-brand {
-    background-size: 80%;
+    background-size: 100%;
   }
 
   .page-header {
@@ -1961,10 +1982,10 @@ body.boxed
     margin-bottom: 30px;
   }
   .rotate-fact {
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
   .rotate-fact-start {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   a.rotate-box-1 {
     text-align: center;
@@ -2022,7 +2043,8 @@ body.boxed
 
   .rotate-box-1-wrapper .subTitle {
     font-size: 15px;
-    display: block;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
   .navbar-nav > li > a {
@@ -2033,6 +2055,20 @@ body.boxed
 
   .navbar-default.navbar-shrink .navbar-nav > li.active > a {
     box-shadow: none !important;
+  }
+
+  .navbar-brand {
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 170px;
+    height: auto;
+    padding: 24px 0;
+    text-indent: -99999px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 4px;
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -2124,10 +2160,10 @@ a:focus {
 
 /* === Footer === */
 .footer-top {
-  background-color: #363940;
+  background-color: black;
 }
 .footer {
-  background-color: #2d3035;
+  background-color: black;
 }
 #subscribe > button[type="submit"] {
   background: none repeat scroll 0 0 #676d75;
@@ -2194,4 +2230,11 @@ a:focus {
 canvas {
   width: 100%;
   height: 450px;
+}
+
+.ip {
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }

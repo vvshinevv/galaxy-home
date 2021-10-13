@@ -50,7 +50,7 @@ export class ConnectionComponent implements OnInit, AfterViewChecked {
     const container = this.galaxy3dConainterElement.nativeElement;
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(this.width, this.width);
+    // this.renderer.setSize(this.width, this.width);
     this.renderer.outputEncoding = THREE.sRGBEncoding;
 
     container.appendChild(this.renderer.domElement);
