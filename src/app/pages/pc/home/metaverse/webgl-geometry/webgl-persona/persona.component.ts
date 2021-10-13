@@ -33,6 +33,8 @@ export class PersonaComponent implements OnInit, AfterViewChecked {
   ngOnInit() {
     this.height = this.motion3Element.nativeElement.offsetHeight - 30;
     this.width = this.motion3Element.nativeElement.offsetWidth - 30;
+    console.log(this.height);
+    console.log(this.width);
     this.init();
     this.cover();
   }

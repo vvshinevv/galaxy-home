@@ -34,6 +34,9 @@ export class CultureComponent implements OnInit {
   ngOnInit() {
     this.height = this.motion4Element.nativeElement.offsetHeight - 30;
     this.width = this.motion4Element.nativeElement.offsetWidth - 30;
+
+    console.log(this.height);
+    console.log(this.width);
     this.init();
     this.cover();
   }
@@ -79,14 +82,14 @@ export class CultureComponent implements OnInit {
     );
 
     loader.load("5.glb", (gltf: any) => {
-      gltf.scene.scale.set(10, 10, 10);
       gltf.scene.traverse((child) => {
         if (child.isMesh) {
           child.geometry.center(); // center here
+          child.position.x += 1;
         }
       });
 
-       // scale here
+      gltf.scene.scale.set(13, 13, 13); // scale here
       this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
       this.render(this.renderer);
@@ -103,13 +106,11 @@ export class CultureComponent implements OnInit {
   public animate(mesh: any) {
     requestAnimationFrame(() => this.animate(mesh));
     this.controls.update();
-    mesh.rotation.y += 0.1;
-    mesh.rotation.z += 2;
+    mesh.rotation.x += 0.005;
     this.renderer.render(this.scene, this.camera);
   }
 
   public render(renderer: any) {
     renderer.render(this.scene, this.camera);
   }
-
 }
