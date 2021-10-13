@@ -2088,12 +2088,23 @@ body.boxed
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
+  h5 {
+    font-size: 20px;
+  }
   .rotate-box-1-wrapper .mobile .subTitle {
     font-size: 11px;
   }
   #social-section .mobile span {
     font-size: 11px;
     margin-bottom: 5px;
+  }
+  .dna-info .subTitle {
+    font-size: 11px;
+  }
+  ul.contact-address li {
+    padding: 0 0 15px;
+    margin: 0;
+    font-size: 11px;
   }
 }
 
