@@ -738,7 +738,7 @@ a.rotate-box-2:hover {
   left: 0;
   width: 100%;
   z-index: 5;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   overflow: hidden;
 }
 .portfolio_single_content:hover img {
