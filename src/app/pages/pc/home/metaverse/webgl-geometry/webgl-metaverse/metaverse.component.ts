@@ -96,11 +96,14 @@ export class MetaverseComponent implements OnInit, AfterViewChecked {
           child.geometry.center(); // center here
         }
       });
-
+      if (this.galaxy3dConainterElement.nativeElement.offsetWidth >= 450) {
+        gltf.scene.scale.set(9, 9, 9); 
+      } else {
+        gltf.scene.scale.set(11, 11, 11); 
+      }
+      this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
       this.mesh.position.y -= 1.5;
-      this.mesh.scale.set(11, 11, 11);
-      this.scene.add(gltf.scene);
       this.render(this.renderer);
       this.animate(this.mesh);
     });

@@ -11,6 +11,7 @@ import { RoomEnvironment } from "../../../../../../../assets/jsm/environments/Ro
 import { OrbitControls } from "../../../../../../../assets/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "../../../../../../../assets/jsm/loaders/GLTFLoader.js";
 import * as THREE from "three";
+import { createEmptyStateSnapshot } from "@angular/router/src/router_state";
 
 @Component({
   selector: "app-culture",
@@ -90,15 +91,18 @@ export class CultureComponent implements OnInit, AfterViewChecked {
     );
 
     loader.load("5.glb", (gltf: any) => {
-      gltf.scene.traverse((child) => {
+      gltf.scene.traverse((child: any) => {
         if (child.isMesh) {
           child.geometry.center(); // center here
           child.position.x += 0.5;
         }
       });
 
-      gltf.scene.scale.set(17, 17, 17); // scale here
-
+      if (this.galaxy3dConainterElement.nativeElement.offsetWidth >= 450) {
+        gltf.scene.scale.set(15, 15, 15); 
+      } else {
+        gltf.scene.scale.set(17, 17, 17); 
+      }
       this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
       this.render(this.renderer);
