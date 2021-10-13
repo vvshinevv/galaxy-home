@@ -28,25 +28,35 @@ export class MetaverseComponent implements OnInit, AfterViewChecked {
   controls: any;
   height: number;
   width: number;
-  constructor(private renderer2: Renderer2) {
-  }
+  constructor(private renderer2: Renderer2) {}
 
   ngOnInit() {
     this.height = this.motion1Element.nativeElement.offsetHeight - 30;
     this.width = this.motion1Element.nativeElement.offsetWidth - 30;
     this.init();
     this.cover();
+    this.renderer.setSize(
+      this.galaxy3dConainterElement.nativeElement.offsetWidth,
+      this.galaxy3dConainterElement.nativeElement.offsetWidth
+    );
   }
 
   public cover() {
-    this.renderer2.setStyle(this.coverElement.nativeElement, "width", this.galaxy3dConainterElement.nativeElement.offsetWidth + "px");
-    this.renderer2.setStyle(this.coverElement.nativeElement, "height", this.galaxy3dConainterElement.nativeElement.offsetHeight + "px");
+    this.renderer2.setStyle(
+      this.coverElement.nativeElement,
+      "width",
+      this.galaxy3dConainterElement.nativeElement.offsetWidth + "px"
+    );
+    this.renderer2.setStyle(
+      this.coverElement.nativeElement,
+      "height",
+      this.galaxy3dConainterElement.nativeElement.offsetHeight + "px"
+    );
     this.renderer2.setStyle(this.coverElement.nativeElement, "z-index", 9999);
     // this.renderer2.setStyle(this.galaxy3dConainterElement.nativeElement, "position", "absolute");
   }
 
-  ngAfterViewChecked(): void {
-  }
+  ngAfterViewChecked(): void {}
 
   public init() {
     const container = this.galaxy3dConainterElement.nativeElement;
@@ -59,7 +69,7 @@ export class MetaverseComponent implements OnInit, AfterViewChecked {
     this.camera = new THREE.PerspectiveCamera(
       45,
       this.width / this.width,
-      2,
+      1,
       2000
     );
 
@@ -86,9 +96,10 @@ export class MetaverseComponent implements OnInit, AfterViewChecked {
           child.geometry.center(); // center here
         }
       });
-      
+
       this.mesh = gltf.scenes[0];
-      this.mesh.scale.set(10, 10, 10);
+      this.mesh.position.y -= 1.5;
+      this.mesh.scale.set(11, 11, 11);
       this.scene.add(gltf.scene);
       this.render(this.renderer);
       this.animate(this.mesh);

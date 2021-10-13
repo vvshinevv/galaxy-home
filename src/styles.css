@@ -1003,6 +1003,12 @@ a.rotate-box-2:hover {
 .fact-header {
   margin-bottom: 20px;
 }
+.rotate-fact {
+  margin-top: 100px;
+}
+.rotate-fact-start {
+  margin-top: 50px;
+}
 /* ===== End Counter-Up ===== */
 
 /* ===== Begin team ===== */
@@ -1982,10 +1988,10 @@ body.boxed
     margin-bottom: 30px;
   }
   .rotate-fact {
-    /* margin-top: 100px; */
+    margin-top: 50px;
   }
   .rotate-fact-start {
-    margin-top: 40px;
+    margin-top: 0px;
   }
   a.rotate-box-1 {
     text-align: center;
