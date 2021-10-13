@@ -90,13 +90,18 @@ export class PersonaComponent implements OnInit, AfterViewChecked {
     );
 
     loader.load("4.glb", (gltf: any) => {
-      gltf.scene.traverse((child) => {
+      gltf.scene.traverse((child: any) => {
         if (child.isMesh) {
           child.geometry.center(); // center here
         }
       });
+      
+      if (this.galaxy3dConainterElement.nativeElement.offsetWidth >= 450) {
+        gltf.scene.scale.set(10, 10, 10); 
+      } else {
+        gltf.scene.scale.set(13, 13, 13); 
+      }
 
-      gltf.scene.scale.set(13, 13, 13); // scale here
       this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
       this.mesh.position.x -= 5;

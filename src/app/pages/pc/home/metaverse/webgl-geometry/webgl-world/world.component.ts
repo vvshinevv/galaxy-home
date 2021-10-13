@@ -94,7 +94,12 @@ export class WorldComponent implements OnInit {
         }
       });
 
-      gltf.scene.scale.set(13, 13, 13); // scale here
+      if (this.galaxy3dConainterElement.nativeElement.offsetWidth >= 450) {
+        gltf.scene.scale.set(11, 11, 11); 
+      } else {
+        gltf.scene.scale.set(13, 13, 13); 
+      }
+      // gltf.scene.scale.set(13, 13, 13); // scale here
       this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
       this.render(this.renderer);
