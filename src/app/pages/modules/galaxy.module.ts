@@ -18,6 +18,7 @@ import { WorldComponent } from '../pc/home/metaverse/webgl-geometry/webgl-world/
 import { PersonaComponent } from '../pc/home/metaverse/webgl-geometry/webgl-persona/persona.component';
 import { CultureComponent } from '../pc/home/metaverse/webgl-geometry/webgl-culture/culture.component';
 import { GalaxyContactComponent } from '../pc/home/contact/galaxy-contact.component';
+import { GalaxyBusinessRenewComponent } from '../pc/home/business-renew/galaxy-business-renew.component';
 
 const routes: Routes = [
   {
@@ -55,6 +56,7 @@ const routes: Routes = [
     PersonaComponent,
     CultureComponent,
     GalaxyContactComponent,
+    GalaxyBusinessRenewComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
