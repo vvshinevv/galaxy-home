@@ -1241,6 +1241,16 @@ ul.contact-address li i {
 .contact-info .subTitle {
   font-size: 23px;
 }
+.dna-info .mainTitle {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.dna-info .subTitle {
+  font-size: 16px;
+}
+.dna-fact-start {
+  margin-top: 30px;
+}
 /* ===== End contact ===== */
 
 /* ===== Begin footer ===== */
