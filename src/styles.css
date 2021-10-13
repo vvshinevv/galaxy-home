@@ -2088,6 +2088,13 @@ body.boxed
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
+  .rotate-box-1-wrapper .mobile .subTitle {
+    font-size: 11px;
+  }
+  #social-section .mobile span {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
 }
 
 a,
