@@ -13,15 +13,15 @@ import { GLTFLoader } from "../../../../../../../assets/jsm/loaders/GLTFLoader.j
 import * as THREE from "three";
 
 @Component({
-  selector: 'app-culture',
-  templateUrl: './culture.component.html',
-  styleUrls: ['./culture.component.css']
+  selector: "app-culture",
+  templateUrl: "./culture.component.html",
+  styleUrls: ["./culture.component.css"],
 })
-export class CultureComponent implements OnInit {
+export class CultureComponent implements OnInit, AfterViewChecked {
   @ViewChild("galaxy3dConainterElement") galaxy3dConainterElement: ElementRef;
   @ViewChild("cover") coverElement: ElementRef;
   @Input("motion4Element") motion4Element: ElementRef;
-  
+
   camera: any;
   scene: any;
   renderer: any;
@@ -34,16 +34,25 @@ export class CultureComponent implements OnInit {
   ngOnInit() {
     this.height = this.motion4Element.nativeElement.offsetHeight - 30;
     this.width = this.motion4Element.nativeElement.offsetWidth - 30;
-
-    console.log(this.height);
-    console.log(this.width);
     this.init();
     this.cover();
+    this.renderer.setSize(
+      this.galaxy3dConainterElement.nativeElement.offsetWidth,
+      this.galaxy3dConainterElement.nativeElement.offsetWidth
+    );
   }
 
   public cover() {
-    this.renderer2.setStyle(this.coverElement.nativeElement, "width", this.galaxy3dConainterElement.nativeElement.offsetWidth + "px");
-    this.renderer2.setStyle(this.coverElement.nativeElement, "height", this.galaxy3dConainterElement.nativeElement.offsetHeight + "px");
+    this.renderer2.setStyle(
+      this.coverElement.nativeElement,
+      "width",
+      this.galaxy3dConainterElement.nativeElement.offsetWidth + "px"
+    );
+    this.renderer2.setStyle(
+      this.coverElement.nativeElement,
+      "height",
+      this.galaxy3dConainterElement.nativeElement.offsetHeight + "px"
+    );
     this.renderer2.setStyle(this.coverElement.nativeElement, "z-index", 9999);
     // this.renderer2.setStyle(this.galaxy3dConainterElement.nativeElement, "position", "absolute");
   }
@@ -54,7 +63,6 @@ export class CultureComponent implements OnInit {
     const container = this.galaxy3dConainterElement.nativeElement;
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    // this.renderer.setSize(this.width, this.width);
     this.renderer.outputEncoding = THREE.sRGBEncoding;
 
     container.appendChild(this.renderer.domElement);
@@ -85,11 +93,12 @@ export class CultureComponent implements OnInit {
       gltf.scene.traverse((child) => {
         if (child.isMesh) {
           child.geometry.center(); // center here
-          child.position.x += 1;
+          child.position.x += 0.5;
         }
       });
 
-      gltf.scene.scale.set(13, 13, 13); // scale here
+      gltf.scene.scale.set(17, 17, 17); // scale here
+
       this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
       this.render(this.renderer);
@@ -98,7 +107,7 @@ export class CultureComponent implements OnInit {
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableZoom = false;
-    this.controls.autoRotateSpeed = 20;
+    this.controls.autoRotateSpeed = 15;
     this.controls.autoRotate = true;
     this.controls.enableRotate = false;
   }

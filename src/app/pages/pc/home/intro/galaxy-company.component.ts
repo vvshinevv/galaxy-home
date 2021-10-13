@@ -13,5 +13,8 @@ export class GalaxyCompanyComponent implements OnInit {
 
   constructor(private renderer2: Renderer2) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // console.log(this.motion4Element.nativeElement);
+    // console.log(this.motion4Element.nativeElement.offsetWidth);
+  }
 }

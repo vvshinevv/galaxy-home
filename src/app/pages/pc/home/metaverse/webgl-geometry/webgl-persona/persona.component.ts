@@ -13,9 +13,9 @@ import { GLTFLoader } from "../../../../../../../assets/jsm/loaders/GLTFLoader.j
 import * as THREE from "three";
 
 @Component({
-  selector: 'app-persona',
-  templateUrl: './persona.component.html',
-  styleUrls: ['./persona.component.css']
+  selector: "app-persona",
+  templateUrl: "./persona.component.html",
+  styleUrls: ["./persona.component.css"],
 })
 export class PersonaComponent implements OnInit, AfterViewChecked {
   @ViewChild("galaxy3dConainterElement") galaxy3dConainterElement: ElementRef;
@@ -33,15 +33,25 @@ export class PersonaComponent implements OnInit, AfterViewChecked {
   ngOnInit() {
     this.height = this.motion3Element.nativeElement.offsetHeight - 30;
     this.width = this.motion3Element.nativeElement.offsetWidth - 30;
-    console.log(this.height);
-    console.log(this.width);
     this.init();
     this.cover();
+    this.renderer.setSize(
+      this.galaxy3dConainterElement.nativeElement.offsetWidth,
+      this.galaxy3dConainterElement.nativeElement.offsetWidth
+    );
   }
 
   public cover() {
-    this.renderer2.setStyle(this.coverElement.nativeElement, "width", this.galaxy3dConainterElement.nativeElement.offsetWidth + "px");
-    this.renderer2.setStyle(this.coverElement.nativeElement, "height", this.galaxy3dConainterElement.nativeElement.offsetHeight + "px");
+    this.renderer2.setStyle(
+      this.coverElement.nativeElement,
+      "width",
+      this.galaxy3dConainterElement.nativeElement.offsetWidth + "px"
+    );
+    this.renderer2.setStyle(
+      this.coverElement.nativeElement,
+      "height",
+      this.galaxy3dConainterElement.nativeElement.offsetHeight + "px"
+    );
     this.renderer2.setStyle(this.coverElement.nativeElement, "z-index", 9999);
     // this.renderer2.setStyle(this.galaxy3dConainterElement.nativeElement, "position", "absolute");
   }
@@ -86,9 +96,11 @@ export class PersonaComponent implements OnInit, AfterViewChecked {
         }
       });
 
-      gltf.scene.scale.set(10, 10, 10); // scale here
+      gltf.scene.scale.set(13, 13, 13); // scale here
       this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
+      this.mesh.position.x -= 5;
+      this.mesh.position.y -= 5;
       this.render(this.renderer);
       this.animate(this.mesh);
     });
@@ -105,6 +117,8 @@ export class PersonaComponent implements OnInit, AfterViewChecked {
   public animate(mesh: any) {
     requestAnimationFrame(() => this.animate(mesh));
     this.controls.update();
+    mesh.rotation.x += 0.001;
+    mesh.rotation.y += 0.001;
     mesh.rotation.z += 0.005;
     this.renderer.render(this.scene, this.camera);
   }

@@ -35,11 +35,23 @@ export class WorldComponent implements OnInit {
     this.width = this.motion2Element.nativeElement.offsetWidth - 30;
     this.init();
     this.cover();
+    this.renderer.setSize(
+      this.galaxy3dConainterElement.nativeElement.offsetWidth,
+      this.galaxy3dConainterElement.nativeElement.offsetWidth
+    );
   }
 
   public cover() {
-    this.renderer2.setStyle(this.coverElement.nativeElement, "width", this.galaxy3dConainterElement.nativeElement.offsetWidth + "px");
-    this.renderer2.setStyle(this.coverElement.nativeElement, "height", this.galaxy3dConainterElement.nativeElement.offsetHeight + "px");
+    this.renderer2.setStyle(
+      this.coverElement.nativeElement,
+      "width",
+      this.galaxy3dConainterElement.nativeElement.offsetWidth + "px"
+    );
+    this.renderer2.setStyle(
+      this.coverElement.nativeElement,
+      "height",
+      this.galaxy3dConainterElement.nativeElement.offsetHeight + "px"
+    );
     this.renderer2.setStyle(this.coverElement.nativeElement, "z-index", 9999);
     // this.renderer2.setStyle(this.galaxy3dConainterElement.nativeElement, "position", "absolute");
   }
@@ -82,7 +94,7 @@ export class WorldComponent implements OnInit {
         }
       });
 
-      gltf.scene.scale.set(10, 10, 10); // scale here
+      gltf.scene.scale.set(13, 13, 13); // scale here
       this.scene.add(gltf.scene);
       this.mesh = gltf.scenes[0];
       this.render(this.renderer);
