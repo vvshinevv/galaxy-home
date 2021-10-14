@@ -70,9 +70,29 @@ $(function() {
         // Animate loader off screen
         $(".page-loader").fadeOut("slow");
         if (window.location.hash) {
-            $('html, body').stop().animate({
-                scrollTop: $(window.location.hash).offset().top - 64
-            }, 1500, 'easeInOutExpo');
+            if (window.location.hash === '#galaxy-ip-section') {
+                $('html, body').stop().animate({
+                    scrollTop: $('#galaxy-ip-section').offset().top - 64
+                });
+            }
+    
+            if (window.location.hash === '#business-section') {
+                $('html, body').stop().animate({
+                    scrollTop: $('#business-section').offset().top - 614
+                }, 1500, 'easeInOutExpo');
+            }
+    
+            if (window.location.hash === '#contact-section') {
+                $('html, body').stop().animate({
+                    scrollTop: $('#contact-section').offset().top - 350
+                }, 1500, 'easeInOutExpo');
+            }
+    
+            if (window.location.hash === '#company-section') {
+                $('html, body').stop().animate({
+                    scrollTop: $('#company-section').offset().top - 64
+                }, 1500, 'easeInOutExpo');
+            }
         }
     });
 
