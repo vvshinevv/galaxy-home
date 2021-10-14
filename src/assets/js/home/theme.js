@@ -1,6 +1,12 @@
 
-$(function() {
+$(function(event) {
 
+    if (window.location.hash) {
+        $('html, body').stop().animate({
+            scrollTop: $(window.location.hash).offset().top - 64
+        }, 1500, 'easeInOutExpo');
+    }
+    
     /////////////////////////////////////////////////////////////////////
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     /////////////////////////////////////////////////////////////////////
@@ -11,6 +17,11 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    //#galaxy-ip-section
+    //#business-section
+    //#contact-section
+    //#company-section
 
     ////////////////////////////////////////////////////////////////////////
     // On-Scroll Animated Header: https://github.com/codrops/AnimatedHeader
