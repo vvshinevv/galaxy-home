@@ -1,12 +1,6 @@
 
-$(function(event) {
+$(function() {
 
-    if (window.location.hash) {
-        $('html, body').stop().animate({
-            scrollTop: $(window.location.hash).offset().top - 64
-        }, 1500, 'easeInOutExpo');
-    }
-    
     /////////////////////////////////////////////////////////////////////
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     /////////////////////////////////////////////////////////////////////
@@ -17,11 +11,6 @@ $(function(event) {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-
-    //#galaxy-ip-section
-    //#business-section
-    //#contact-section
-    //#company-section
 
     ////////////////////////////////////////////////////////////////////////
     // On-Scroll Animated Header: https://github.com/codrops/AnimatedHeader
@@ -80,6 +69,11 @@ $(function(event) {
     $(window).load(function() {
         // Animate loader off screen
         $(".page-loader").fadeOut("slow");
+        if (window.location.hash) {
+            $('html, body').stop().animate({
+                scrollTop: $(window.location.hash).offset().top - 64
+            }, 1500, 'easeInOutExpo');
+        }
     });
 
 
