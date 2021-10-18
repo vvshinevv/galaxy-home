@@ -80,7 +80,7 @@ $(function() {
         
             if (window.location.hash === '#dna-section') {
                 $('html, body').stop().animate({
-                    scrollTop: $('#dna-section').offset().top - 640
+                    scrollTop: $('#dna-section').offset().top - 64
                 });
             }
     
