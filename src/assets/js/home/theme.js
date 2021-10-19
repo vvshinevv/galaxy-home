@@ -1,10 +1,10 @@
 
-$(function() {
+$(function () {
 
     /////////////////////////////////////////////////////////////////////
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     /////////////////////////////////////////////////////////////////////
-    $('.page-scroll').on('click', function(event) {
+    $('.page-scroll').on('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - 64
@@ -15,29 +15,29 @@ $(function() {
     ////////////////////////////////////////////////////////////////////////
     // On-Scroll Animated Header: https://github.com/codrops/AnimatedHeader
     ////////////////////////////////////////////////////////////////////////
-    var cbpAnimatedHeader = (function() {
+    var cbpAnimatedHeader = (function () {
 
         var docElem = document.documentElement,
-            header = document.querySelector( '.navbar-fixed-top' ),
+            header = document.querySelector('.navbar-fixed-top'),
             didScroll = false,
             changeHeaderOn = 10;
 
         function init() {
-            window.addEventListener( 'scroll', function( event ) {
-                if( !didScroll ) {
+            window.addEventListener('scroll', function (event) {
+                if (!didScroll) {
                     didScroll = true;
-                    setTimeout( scrollPage, 250 );
+                    setTimeout(scrollPage, 250);
                 }
-            }, false );
+            }, false);
         }
 
         function scrollPage() {
             var sy = scrollY();
-            if ( sy >= changeHeaderOn ) {
-                classie.add( header, 'navbar-shrink' );
+            if (sy >= changeHeaderOn) {
+                classie.add(header, 'navbar-shrink');
             }
             else {
-                classie.remove( header, 'navbar-shrink' );
+                classie.remove(header, 'navbar-shrink');
             }
             didScroll = false;
         }
@@ -66,31 +66,31 @@ $(function() {
     ///////////////////////////////////////////
 
     // Wait for window load
-    $(window).load(function() {
+    $(window).load(function () {
         // Animate loader off screen
         $(".page-loader").fadeOut("slow");
 
-        
+
         if (window.location.hash) {
             if (window.location.hash === '#galaxy-ip-section') {
                 $('html, body').stop().animate({
                     scrollTop: $('#galaxy-ip-section').offset().top - 64
                 });
             }
-        
+
             if (window.location.hash === '#dna-section') {
                 $('html, body').stop().animate({
                     scrollTop: $('#dna-section').offset().top - 64
                 });
             }
-    
+
             if (window.location.hash === '#company-section') {
                 $('html, body').stop().animate({
                     scrollTop: $('#company-section').offset().top - 64
                 });
             }
         }
-        
+
     });
 
 
@@ -103,31 +103,31 @@ $(function() {
 
     // Intro text carousel
     $("#owl-intro-text").owlCarousel({
-        singleItem : true,
-        autoPlay : 6000,
-        stopOnHover : true,
-        navigation : false,
-        navigationText : false,
-        pagination : true
+        singleItem: true,
+        autoPlay: 6000,
+        stopOnHover: true,
+        navigation: false,
+        navigationText: false,
+        pagination: true
     })
 
 
     // Partner carousel
     $("#owl-partners").owlCarousel({
-        items : 4,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [980,2],
-        itemsTablet: [768,2],
-        autoPlay : 5000,
-        stopOnHover : true,
-        pagination : false
+        items: 4,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [980, 2],
+        itemsTablet: [768, 2],
+        autoPlay: 5000,
+        stopOnHover: true,
+        pagination: false
     })
 
     // Testimonials carousel
     $("#owl-testimonial").owlCarousel({
-        singleItem : true,
-        pagination : true,
-        autoHeight : true
+        singleItem: true,
+        pagination: true,
+        autoHeight: true
     })
 
 
@@ -165,22 +165,22 @@ $(function() {
     ////////////////////////////////////////////////////////////////////////////////////////////
     // Isotop Package
     ////////////////////////////////////////////////////////////////////////////////////////////
-    $(window).load(function() {
-    $('.portfolio_menu ul li').click(function(){
-        $('.portfolio_menu ul li').removeClass('active_prot_menu');
-        $(this).addClass('active_prot_menu');
-    });
+    $(window).load(function () {
+        $('.portfolio_menu ul li').click(function () {
+            $('.portfolio_menu ul li').removeClass('active_prot_menu');
+            $(this).addClass('active_prot_menu');
+        });
 
-    var $container = $('#portfolio');
-    $container.isotope({
-    itemSelector: '.col-sm-4',
-    layoutMode: 'fitRows'
-    });
-    $('#filters').on( 'click', 'a', function() {
-    var filterValue = $(this).attr('data-filter');
-    $container.isotope({ filter: filterValue });
-    return false;
-    });
+        var $container = $('#portfolio');
+        $container.isotope({
+            itemSelector: '.col-sm-4',
+            layoutMode: 'fitRows'
+        });
+        $('#filters').on('click', 'a', function () {
+            var filterValue = $(this).attr('data-filter');
+            $container.isotope({ filter: filterValue });
+            return false;
+        });
     });
 
 
@@ -190,7 +190,7 @@ $(function() {
     /////////////////////////
 
     // Check to see if the window is top if not then display button
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scrolltotop').fadeIn();
         } else {
@@ -199,8 +199,8 @@ $(function() {
     });
 
     // Click event to scroll to top
-    $('.scrolltotop').click(function(){
-        $('html, body').animate({scrollTop : 0}, 1500, 'easeInOutExpo');
+    $('.scrolltotop').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -210,8 +210,8 @@ $(function() {
     // Close mobile menu when click menu link (Bootstrap default menu)
     ////////////////////////////////////////////////////////////////////
 
-    $(document).on('click','.navbar-collapse.in',function(e) {
-        if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+    $(document).on('click', '.navbar-collapse.in', function (e) {
+        if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
             $(this).collapse('hide');
         }
     });
