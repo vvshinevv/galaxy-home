@@ -114,7 +114,7 @@ export class GalaxyAboutComponent implements OnInit {
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(window.innerWidth - 0.001, window.innerHeight - 0.001);
     container.appendChild(this.renderer.domElement);
 
     // this.stats = new Stats();
