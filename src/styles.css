@@ -2218,7 +2218,7 @@ th {
   /* Parallax background */
   .parallax {
     background-attachment: scroll !important;
-    /* background-position: 50% 50% !important; */
+    background-position: 50% 50% !important;
     background-size: auto auto !important;
   }
 

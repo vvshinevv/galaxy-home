@@ -75,12 +75,7 @@ export class GalaxyAboutComponent implements OnInit {
 
   public init() {
     const container = this.galaxy3dConainterElement.nativeElement;
-    this.camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      1,
-      10000
-    );
+    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     this.camera.position.z = 1000;
 
     this.scene = new THREE.Scene();
@@ -90,19 +85,13 @@ export class GalaxyAboutComponent implements OnInit {
     const positions = new Float32Array(numParticles * 3);
     const scales = new Float32Array(numParticles);
 
-    let i = 0,
-      j = 0;
-
+    let i = 0, j = 0;
     for (let ix = 0; ix < this.AMOUNTX; ix++) {
       for (let iy = 0; iy < this.AMOUNTY; iy++) {
-        positions[i] =
-          ix * this.SEPARATION - (this.AMOUNTX * this.SEPARATION) / 2; // x
+        positions[i] = ix * this.SEPARATION - (this.AMOUNTX * this.SEPARATION) / 2; // x
         positions[i + 1] = 0; // y
-        positions[i + 2] =
-          iy * this.SEPARATION - (this.AMOUNTY * this.SEPARATION) / 2; // z
-
+        positions[i + 2] = iy * this.SEPARATION - (this.AMOUNTY * this.SEPARATION) / 2; // z
         scales[j] = 1;
-
         i += 3;
         j++;
       }
@@ -125,7 +114,7 @@ export class GalaxyAboutComponent implements OnInit {
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(window.innerWidth - 1, window.innerHeight - 0.001);
     container.appendChild(this.renderer.domElement);
 
     // this.stats = new Stats();
@@ -133,6 +122,7 @@ export class GalaxyAboutComponent implements OnInit {
 
     container.style.touchAction = "none";
     container.style.position = "absolute";
+    container.style.backgroundColor = "black";
     container.addEventListener("pointermove", (event: any) => {
       if (event.isPrimary === false) return;
 
