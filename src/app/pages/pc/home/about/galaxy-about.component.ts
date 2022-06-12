@@ -14,6 +14,7 @@ import * as THREE from "three";
 })
 export class GalaxyAboutComponent implements OnInit {
   @ViewChild("galaxy3dContainer") galaxy3dConainterElement: ElementRef;
+  @ViewChild("popup") popupElement: ElementRef;
   vertexshader: any;
   fragmentshader: any;
 
@@ -191,5 +192,10 @@ export class GalaxyAboutComponent implements OnInit {
     this.renderer.render(this.scene, this.camera);
 
     this.count += 0.1;
+  }
+
+  async closePopup() {
+    console.log('aaaa');
+    this.popupElement.nativeElement.style.display = "none";
   }
 }
