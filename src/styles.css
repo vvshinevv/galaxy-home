@@ -2541,6 +2541,44 @@ th {
   #team-section .col-md-2 {
     width: 100%;
   }
+
+  .mobile .popup_box>h3 {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .mobile .popup_text {
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .mobile .popup_text_no_margin {
+    color: black;
+    font-size: 8px;
+    text-align: left;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .mobile .popup_box_inner {
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px;
+    padding: 0.7em;
+  }
+
+  .mobile .ly_vote_close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 23px;
+    height: 23px;
+  }
 }
 
 /* Custom, iPhone Retina */
@@ -2582,7 +2620,7 @@ th {
     font-weight: bold;
     line-height: normal;
   }
-  
+
   .mobile .popup_text_no_margin {
     color: black;
     font-size: 8px;
@@ -2596,6 +2634,14 @@ th {
     border-color: #000;
     border-width: 1px;
     padding: 0.7em;
+  }
+
+  .mobile .ly_vote_close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 23px;
+    height: 23px;
   }
 }
 
