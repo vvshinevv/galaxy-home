@@ -140,7 +140,7 @@ export class GalaxyAboutComponent implements OnInit {
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
 
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(window.innerWidth - 1, window.innerHeight - 0.001);
   }
 
   public animate() {
