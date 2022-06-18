@@ -38,14 +38,21 @@
 }
 
 @media only screen and (max-width: 767px) {
+    #privacy-section .container {
+        clear: both;
+        width: 90%;
+        padding: 10px 10px 10px 10px;
+        line-height: 140%;
+    }
+
     #privacy-section h3 {
-        font-size: 50px;
+        font-size: 20px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     #privacy-section p {
-        font: 30px/1.2em "Roboto";
+        font: 15px/1.2em "Roboto";
         font-weight: 100;
     }
 }
