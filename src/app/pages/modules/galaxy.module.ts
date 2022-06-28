@@ -19,8 +19,13 @@ import { PersonaComponent } from '../pc/home/metaverse/webgl-geometry/webgl-pers
 import { CultureComponent } from '../pc/home/metaverse/webgl-geometry/webgl-culture/culture.component';
 import { GalaxyContactComponent } from '../pc/home/contact/galaxy-contact.component';
 import { GalaxyBusinessRenewComponent } from '../pc/home/business-renew/galaxy-business-renew.component';
+import { GalaxyPrivacyComponent } from '../pc/home/privacy/galaxy-privacy.component';
 
 const routes: Routes = [
+  {
+    path: "privacy",
+    component: GalaxyPrivacyComponent
+  },
   {
     path: "",
     component: GalaxyLayoutComponent,
@@ -32,9 +37,9 @@ const routes: Routes = [
       {
         path: "**",
         component: GalaxyHomeComponent,
-      },
+      }
     ],
-  },
+  }
 ];
 
 @NgModule({
@@ -57,6 +62,7 @@ const routes: Routes = [
     CultureComponent,
     GalaxyContactComponent,
     GalaxyBusinessRenewComponent,
+    GalaxyPrivacyComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
