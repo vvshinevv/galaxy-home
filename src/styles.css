@@ -142,8 +142,10 @@ dfn[title] {
   cursor: help;
 }
 
-table {
+table, tr, td{
   border-collapse: collapse;
+  border:none;
+  border-width: 0px;
   border-spacing: 0;
 }
 
@@ -1929,7 +1931,7 @@ th {
 .pc .popup_box_inner {
   border-style: solid;
   border-color: #000;
-  border-width: 1px;
+  border-width: 0px;
   padding: 2em;
 }
 
@@ -2027,7 +2029,7 @@ th {
 .mobile .popup_box_inner {
   border-style: solid;
   border-color: #000;
-  border-width: 1px;
+  border-width: 0px;
   padding: 2em;
 }
 
@@ -2568,7 +2570,7 @@ th {
   .mobile .popup_box_inner {
     border-style: solid;
     border-color: #000;
-    border-width: 1px;
+    border-width: 0px;
     padding: 0.7em;
   }
 
@@ -2632,7 +2634,7 @@ th {
   .mobile .popup_box_inner {
     border-style: solid;
     border-color: #000;
-    border-width: 1px;
+    border-width: 0px;
     padding: 0.7em;
   }
 
