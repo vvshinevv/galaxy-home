@@ -44,7 +44,7 @@ export class GalaxyAboutComponent implements OnInit {
     this.fragmentshaderScript();
     this.init();
     this.animate();
-    // this.popupElement.nativeElement.style.display = "none";
+    this.popupElement.nativeElement.style.display = "none"; //check
   }
 
   public vertexshaderScript() {
