@@ -2023,10 +2023,22 @@ th {
   position: relative;
 }
 
+.mobile .popup_box>h2 {
+  color: black;
+  text-align: center;
+  font-size: 35px;
+}
+
 .mobile .popup_box>h3 {
   color: black;
   text-align: center;
   font-size: 30px;
+}
+
+.mobile .popup_box>h4 {
+  color: black;
+  text-align: center;
+  font-size: 27px;
 }
 
 /* mobile Table  */
