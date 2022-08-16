@@ -1912,10 +1912,22 @@ body.boxed .body .navbar-inverse.navbar-transparent.navbar-shrink .navbar-brand 
   position: relative;
 }
 
+.pc .popup_box>h2 {
+  color: black;
+  text-align: center;
+  font-size: 35px;
+}
+
 .pc .popup_box>h3 {
   color: black;
   text-align: center;
   font-size: 30px;
+}
+
+.pc .popup_box>h4 {
+  color: black;
+  text-align: center;
+  font-size: 27px;
 }
 
 /* pc Table  */
@@ -2011,10 +2023,22 @@ th {
   position: relative;
 }
 
+.mobile .popup_box>h2 {
+  color: black;
+  text-align: center;
+  font-size: 35px;
+}
+
 .mobile .popup_box>h3 {
   color: black;
   text-align: center;
   font-size: 30px;
+}
+
+.mobile .popup_box>h4 {
+  color: black;
+  text-align: center;
+  font-size: 27px;
 }
 
 /* mobile Table  */
@@ -2610,10 +2634,22 @@ th {
     font-size: 11px;
   }
 
+  .mobile .popup_box>h2 {
+    color: black;
+    text-align: center;
+    font-size: 19px;
+  }
+
   .mobile .popup_box>h3 {
     color: black;
     text-align: center;
     font-size: 16px;
+  }
+
+  .mobile .popup_box>h4 {
+    color: black;
+    text-align: center;
+    font-size: 14px;
   }
 
   .mobile .popup_text {
