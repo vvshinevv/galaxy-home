@@ -44,7 +44,8 @@ export class GalaxyAboutComponent implements OnInit {
     this.fragmentshaderScript();
     this.init();
     this.animate();
-    // this.popupElement.nativeElement.style.display = "none";  // 체크!
+    // Notice On/Off
+    this.popupElement.nativeElement.style.display = "none"; // 체크!
   }
 
   public vertexshaderScript() {
@@ -76,7 +77,12 @@ export class GalaxyAboutComponent implements OnInit {
 
   public init() {
     const container = this.galaxy3dConainterElement.nativeElement;
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+    this.camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      1,
+      10000
+    );
     this.camera.position.z = 1000;
 
     this.scene = new THREE.Scene();
@@ -86,12 +92,15 @@ export class GalaxyAboutComponent implements OnInit {
     const positions = new Float32Array(numParticles * 3);
     const scales = new Float32Array(numParticles);
 
-    let i = 0, j = 0;
+    let i = 0,
+      j = 0;
     for (let ix = 0; ix < this.AMOUNTX; ix++) {
       for (let iy = 0; iy < this.AMOUNTY; iy++) {
-        positions[i] = ix * this.SEPARATION - (this.AMOUNTX * this.SEPARATION) / 2; // x
+        positions[i] =
+          ix * this.SEPARATION - (this.AMOUNTX * this.SEPARATION) / 2; // x
         positions[i + 1] = 0; // y
-        positions[i + 2] = iy * this.SEPARATION - (this.AMOUNTY * this.SEPARATION) / 2; // z
+        positions[i + 2] =
+          iy * this.SEPARATION - (this.AMOUNTY * this.SEPARATION) / 2; // z
         scales[j] = 1;
         i += 3;
         j++;
