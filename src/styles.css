@@ -1924,7 +1924,7 @@ body.boxed
   overflow: scroll;
 }
 
-.pc .popup2 {
+/* .pc .popup2 {
   position: absolute;
   top: 200px;
   left: 60%;
@@ -1937,7 +1937,7 @@ body.boxed
   margin-top: 3em;
   padding: 2em 2em 2em 2em;
   overflow: scroll;
-}
+} */
 
 .pc .popup_box {
   position: relative;
