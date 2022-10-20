@@ -9,12 +9,13 @@ import * as THREE from "three";
 
 @Component({
   selector: "app-galaxy-about",
-  templateUrl: "./galaxy-about.component.html",
+  templateUrl: "./galaxy-about.component_notice.html",
   styleUrls: ["./galaxy-about.component.css"],
 })
 export class GalaxyAboutComponent implements OnInit {
   @ViewChild("galaxy3dContainer") galaxy3dConainterElement: ElementRef;
   @ViewChild("popupContainer") popupElement: ElementRef;
+  @ViewChild("popupContainer2") popupElement2: ElementRef;
   vertexshader: any;
   fragmentshader: any;
 
@@ -196,5 +197,8 @@ export class GalaxyAboutComponent implements OnInit {
 
   async closePopup() {
     this.popupElement.nativeElement.style.display = "none";
+  }
+  async closePopup2() {
+    this.popupElement2.nativeElement.style.display = "none";
   }
 }
