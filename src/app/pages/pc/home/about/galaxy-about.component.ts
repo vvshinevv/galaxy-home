@@ -9,8 +9,8 @@ import * as THREE from "three";
 
 @Component({
   selector: "app-galaxy-about",
-  //templateUrl: "./galaxy-about.component_notice.html",
-  templateUrl: "./galaxy-about.component.html",
+  templateUrl: "./galaxy-about.component_notice.html",
+  //templateUrl: "./galaxy-about.component.html",
   styleUrls: ["./galaxy-about.component.css"],
 })
 export class GalaxyAboutComponent implements OnInit {
@@ -47,7 +47,7 @@ export class GalaxyAboutComponent implements OnInit {
     this.init();
     this.animate();
     // Notice On/Off
-    this.popupElement.nativeElement.style.display = "none"; // 체크!
+    // this.popupElement.nativeElement.style.display = "none"; // 체크!
   }
 
   public vertexshaderScript() {
