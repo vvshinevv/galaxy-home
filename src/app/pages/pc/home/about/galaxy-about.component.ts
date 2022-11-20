@@ -9,7 +9,7 @@ import * as THREE from "three";
 
 @Component({
   selector: "app-galaxy-about",
-  templateUrl: "./galaxy-about.component_notice_221104_소규모합병.html",
+  templateUrl: "./galaxy-about.component_notice_221119_합병이의제출.html",
   //templateUrl: "./galaxy-about.component.html",
   styleUrls: ["./galaxy-about.component.css"],
 })
@@ -39,7 +39,7 @@ export class GalaxyAboutComponent implements OnInit {
 
   stats: any;
 
-  constructor(private renderer2: Renderer2) { }
+  constructor(private renderer2: Renderer2) {}
 
   ngOnInit() {
     this.vertexshaderScript();
