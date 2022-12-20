@@ -9,7 +9,7 @@ import * as THREE from "three";
 
 @Component({
   selector: "app-galaxy-about",
-  templateUrl: "./galaxy-about.component_notice_221119_합병이의제출.html",
+  templateUrl: "./galaxy-about.component_notice_221222_합병보고의공고.html",
   //templateUrl: "./galaxy-about.component.html",
   styleUrls: ["./galaxy-about.component.css"],
 })
