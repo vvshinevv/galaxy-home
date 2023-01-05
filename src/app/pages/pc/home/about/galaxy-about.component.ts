@@ -39,7 +39,7 @@ export class GalaxyAboutComponent implements OnInit {
 
   stats: any;
 
-  constructor(private renderer2: Renderer2) {}
+  constructor(private renderer2: Renderer2) { }
 
   ngOnInit() {
     this.vertexshaderScript();
@@ -47,7 +47,7 @@ export class GalaxyAboutComponent implements OnInit {
     this.init();
     this.animate();
     // Notice On/Off
-    // this.popupElement.nativeElement.style.display = "none"; // 체크!
+    this.popupElement.nativeElement.style.display = "none"; // 체크!
   }
 
   public vertexshaderScript() {
