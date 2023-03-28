@@ -5,3 +5,4 @@ User-Agent : Yeti
 User-Agent : Daumoa
 Allow : /
 Disallow: /admin/
+Sitemap: https://galaxyuniverse.ai/sitemap.xml
